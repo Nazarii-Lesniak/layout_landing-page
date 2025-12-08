@@ -1,0 +1,18 @@
+.pre-about-us__bg {
+  background-image: url(../images/before-about-us-bg\ -\ mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 200px;
+
+  @include onTablet {
+    background-image: url(../images/before-about-us-bg\ -\ tablet.png);
+    height: 400px;
+  }
+
+  @include onDesktop {
+    background-image: url(../images/before-about-us-bg\ -\ desktop.png);
+    height: 460px;
+  }
+}
