@@ -3,6 +3,8 @@
   width: 24px;
   height: 24px;
   background-size: cover;
+  cursor: pointer;
+  position: relative;
 
   @include hover(transform, scale(1.2));
 
@@ -13,32 +15,36 @@
 
   &--phone {
     background-image: url('../images/icons/icon-phone-call.svg');
-    position: relative;
 
-    &::after {
-      content: attr(data-phone);
-      position: absolute;
-      right: -200%;
-      top: 8px;
-      white-space: nowrap;
-      opacity: 0;
-      visibility: hidden;
-      color: #292929;
-      font-size:12px;
-      font-weight: 700;
-      line-height: 16px;
-      letter-spacing: 2px;
-
-      @include onTablet {
-        right: -100%;
+    @include onDesktop {
+      &:hover {
+        .icon__phone-number {
+            display: block;
+            opacity: 1;
+            left: -150px;
+        }
       }
     }
   }
 
-  &:hover::after {
-    opacity: 1;
-    visibility: visible;
-    transform: translate(-50%, 0);
+  &__phone-number {
+    font-family: 'Inter', sans-serif;
+    display: inline-block;
+    position: absolute;
+    opacity: 0;
+    color: $main-text-color;
+    white-space: nowrap;
+    text-decoration: none;
+    z-index: 5;
+    padding: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 1px;
+    transition: all $effect-time;
+    top: 50%;
+    left: -150px;
+    transform: translateY(-50%);
   }
 
   &--menu {

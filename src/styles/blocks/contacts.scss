@@ -61,7 +61,6 @@
     font-size: 16px;
     line-height: 27px;
 
-
     @include hover(transform, scale(0.97));
 
     &:hover {
@@ -86,8 +85,16 @@
   }
 
   &__text-info {
+    font-family: "Space Mono", monospace;
     text-decoration: none;
     line-height: 140%;
     color: #191919;
+
+    @include hover(transform, scale(0.95));
+
+    &:hover {
+      transition: all $effect-time;
+      color: #9393A3;
+    }
   }
 }

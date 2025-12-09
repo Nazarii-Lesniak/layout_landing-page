@@ -1,7 +1,5 @@
 .about-us {
-
   @include pageGrid;
-
   &__title {
     grid-column: 1 / -1;
 
@@ -10,11 +8,13 @@
     }
 
     @include onDesktop {
-      grid-column: span 5;
+      grid-column: span 6;
     }
   }
 
   &__content {
+    font-family: "Space Mono", monospace;
+    
     grid-column: 1 / -1;
 
     @include onTablet {
@@ -22,12 +22,11 @@
     }
 
     @include onDesktop {
-      grid-column: 7 / -1;
+      grid-column: span 6;
     }
   }
 
   &__description {
-    display: grid;
     row-gap: 16px;
     margin: 0;
     margin-bottom: 40px;

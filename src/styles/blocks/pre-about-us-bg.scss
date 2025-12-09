@@ -1,19 +1,36 @@
 .pre-about-us {
+  align-items: center;
+  display: flex;
+  position: relative;
+  width: 100vw;
+  max-width: 100vw;
+  min-height: 200px;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  left: 50%;
+  right: 50%;
+
+  @include onTablet {
+    height: 400px;
+  }
+
+  @include onDesktop {
+    height: 460px;
+  }
+
   &__bg {
-    background-image: url(../images/before-about-us-bg\ -\ mobile.png);
-    min-width: 100%;
+    margin: 0 auto;
+    display: block;
+    position: absolute;
+    width: 100vw;
+    max-width: 100vw;
     height: 200px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 
     @include onTablet {
-      background-image: url(../images/before-about-us-bg\ -\ tablet.png);
       height: 400px;
     }
 
     @include onDesktop {
-      background-image: url(../images/before-about-us-bg\ -\ desktop.png);
       height: 460px;
     }
   }

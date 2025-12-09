@@ -78,10 +78,13 @@
   }
 
   &::placeholder {
+    font-family: "Space Mono", monospace;
     color: #7E7E83;
   }
 
-  &:invalid:not(:placeholder-shown) {
-    border-color: red;
+  &:hover::placeholder {
+    transform: scale(0.99);
+    border-color: #D5D7DE;
+    color: $main-text-color;
   }
 }

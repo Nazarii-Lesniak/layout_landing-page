@@ -1,7 +1,11 @@
 .recommended {
   &__products {
     @include pageGrid;
-    row-gap: 40px;
+    gap: 40px 20px;
+
+    @include onTablet {
+      column-gap: 24px;
+    }
   }
 
   &__product {
@@ -18,6 +22,10 @@
 
     @include onDesktop {
       grid-column: span 4;
+    }
+
+    &__price {
+      margin-top: auto;
     }
   }
 }
