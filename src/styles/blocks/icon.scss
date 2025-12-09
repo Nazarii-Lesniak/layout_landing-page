@@ -8,7 +8,7 @@
 
   @include hover(transform, scale(1.2));
 
-  @include onTablet {
+  @include on-tablet {
     height: 32px;
     width: 32px;
   }
@@ -16,7 +16,7 @@
   &--phone {
     background-image: url('../images/icons/icon-phone-call.svg');
 
-    @include onDesktop {
+    @include on-desktop {
       &:hover {
         .icon__phone-number {
             display: block;

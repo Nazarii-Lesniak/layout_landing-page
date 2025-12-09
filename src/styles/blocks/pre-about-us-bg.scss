@@ -10,11 +10,11 @@
   left: 50%;
   right: 50%;
 
-  @include onTablet {
+  @include on-tablet {
     height: 400px;
   }
 
-  @include onDesktop {
+  @include on-desktop {
     height: 460px;
   }
 
@@ -26,11 +26,11 @@
     max-width: 100vw;
     height: 200px;
 
-    @include onTablet {
+    @include on-tablet {
       height: 400px;
     }
 
-    @include onDesktop {
+    @include on-desktop {
       height: 460px;
     }
   }
